@@ -27,6 +27,10 @@ ml-full-stack-app/
    ```bash
    pip install -r requirements.txt
    ```
+4. Start development server:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
 
 ### Frontend Setup
 1. Navigate to frontend directory:
