@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Build directories
+build/
+dist/
+.next/
+.nuxt/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Mobile specific
+mobile/ios/Pods/
+mobile/android/.gradle/
+mobile/android/build/
+mobile/ios/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System Files
+.DS_Store
+Thumbs.db
