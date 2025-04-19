@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # Database
-    # DATABASE_URL: str = "sqlite:///./movies.db"
+    DATABASE_URL: str = "sqlite:///./app.db"
     
     # CORS
     BACKEND_CORS_ORIGINS: list = ["http://localhost:3000"]
