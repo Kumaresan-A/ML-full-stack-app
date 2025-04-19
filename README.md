@@ -32,6 +32,38 @@ ml-full-stack-app/
    uvicorn app.main:app --reload
    ```
 
+#### Database Migrations (Alembic)
+
+**Initialize Alembic (only once per project):**
+```bash
+alembic init alembic
+```
+This creates the Alembic migration environment.
+
+**Configure Alembic:**
+- Edit `alembic.ini` to set your database URL.
+- Ensure `target_metadata = Base.metadata` in `alembic/env.py` and import all models.
+
+**Create a new migration (after changing models):**
+```bash
+alembic revision --autogenerate -m "create ratings table"
+```
+This generates a migration script reflecting model changes.
+
+**Apply migrations to update the database:**
+```bash
+alembic upgrade head
+```
+This applies all pending migrations, creating/updating tables as needed.
+
+**Development:**
+- Run `alembic revision --autogenerate -m "<message>"` and `alembic upgrade head` whenever you change models.
+
+**Production:**
+- Review generated migration scripts before applying.
+- Use `alembic upgrade head` as part of your deployment process to ensure the production DB schema is up-to-date.
+
+
 ### Frontend Setup
 1. Navigate to frontend directory:
    ```bash
