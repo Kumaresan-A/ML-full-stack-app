@@ -4,9 +4,13 @@ from app.core.config import settings
 from app.api.v1.endpoints import movies
 from app.db.base import Base
 from app.db.session import engine
+from app.db.init_db import init_db
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
+
+# Initialize database with sample data
+init_db()
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -30,6 +34,4 @@ def read_root():
 
 
 # Include routers
-# app.include_router(movies.router, prefix=f"{settings.API_V1_STR}/movies", tags=["movies"]) 
-
-app.include_router(movies.router, prefix="/api/v1/movies")
+app.include_router(movies.router, prefix=f"{settings.API_V1_STR}/movies", tags=["movies"])
