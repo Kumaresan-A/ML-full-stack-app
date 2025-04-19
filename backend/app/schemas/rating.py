@@ -9,7 +9,5 @@ class RatingCreate(RatingBase):
 
 class Rating(RatingBase):
     id: int
-    movie_id: int
-
     class Config:
-        from_attributes = True 
+        from_attributes = True
