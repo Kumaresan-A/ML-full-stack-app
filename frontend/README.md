@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Project Structure & Folder Usage
+
+### components
+Reusable UI components such as buttons, cards, modals, etc. Place only presentational, stateless, and shared components here.
+
+### features
+Feature-based modules. Each major feature (e.g., movies, auth, user) should have its own subfolder containing UI, logic, and state for that feature.
+
+### hooks
+Custom React hooks for shared logic across components and features.
+
+### layouts
+Application and page layouts to provide consistent structure and navigation across pages.
+
+### services
+API calls, data fetching logic, and integration with backend services. Organize by domain or feature as needed.
+
+### store
+State management setup (e.g., Redux, Zustand, Context API). Organize slices, stores, and related utilities here.
+
+### styles
+Global and modular CSS/SCSS files, theme definitions, and style utilities.
+
+### utils
+General utility and helper functions used across the app.
+
+### assets
+Static assets such as images, fonts, icons, and other files.
+
+### types
+TypeScript type definitions and interfaces shared across the app.
+
+### constants
+App-wide constants, enums, and configuration values.
+
